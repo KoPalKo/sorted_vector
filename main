@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm> 
+#include <vector>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	double input = 0;
+	vector<double> v;
+	cout << "Enter numbers: ";
+	
+	for (int i = 0; input >= 0; i++) //input
+	{
+		cin >> input;
+		if (input >= 0)
+		{
+			v.push_back(input);
+		}
+		else { cout << "Terminated." << endl; }
+	}
+	sort(v.begin(), v.end());
+	cout << "Sorted vector: " << endl;
+	for (vector<double>::iterator it = v.begin(); it != v.end(); ++it) {
+		cout << setprecision(4) << ' ' << *it << endl;
+	}
+	return 0;
+
+}
+
